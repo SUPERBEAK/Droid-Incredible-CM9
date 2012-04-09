@@ -18,6 +18,10 @@
 # should be added to this file.
 #
 
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),inc)
+    include $(all-subdir-makefiles)
+endif
+
 LOCAL_PATH := $(call my-dir)
 
 # Least specific includes go first, so that they can get
@@ -34,6 +38,3 @@ include $(CLEAR_VARS)
 # include the non-open-source counterpart to this file
 -include vendor/htc/inc/AndroidBoardVendor.mk
 
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),inc)
-    include $(all-subdir-makefiles)
-endif
