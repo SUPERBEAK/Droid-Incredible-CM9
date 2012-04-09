@@ -56,7 +56,7 @@ hardware/qcom
 hardware/msm7k
 ```
 
-# Build
+### Build
 ```bash
 cd ~/cm9
 . build/envsetup.sh && brunch inc
